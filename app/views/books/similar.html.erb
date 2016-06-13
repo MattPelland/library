@@ -1,0 +1,24 @@
+<h1>Books similar to <%= @book.name %></h1>
+  <% usingBooks = @books.select{|book| book.genre.to_s == @book.genre.to_s}%>
+  <% if usingBooks.size > 0 %>
+<table>
+  <tr>
+    <th> Title </th>
+    <th> Author </th>
+    <th> Rating </th>
+  </tr>
+<% usingBooks.each do |book| %>
+<% unless (book.name.to_s == @book.name.to_s && book.author.to_s == @book.author.to_s) %>
+<tr>
+  <td><%= book.name %></td>
+  <td><%= book.author %></td>
+  <td><%= book.genre %></td>
+  <td><%= book.rating %></td>
+</tr>
+<%end%>
+<%end%>
+</table>
+<%else%>
+<p>We have no books similar to <%= @book.name %>. </p>
+<%end%>
+<%= link_to "Back", books_path %>

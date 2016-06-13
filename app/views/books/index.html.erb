@@ -14,7 +14,8 @@
   <td><%= book.author %></td>
   <td><%= book.genre %></td>
   <td><%= book.rating %></td>
-  <%= link_to 
+  <td><%= link_to "similar books", similar_book_path(book) %></td>
 </tr>
 <% end %>
 </table>
+<%= link_to "Back", books_path %>

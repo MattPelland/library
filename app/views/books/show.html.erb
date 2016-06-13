@@ -12,4 +12,7 @@
   <strong>Rating: </strong>
   <%= @book.rating %>
 </p>
+
+
+<%= link_to "Similar Books", similar_book_path(@book) %>
 <%= link_to "Back", books_path %>
