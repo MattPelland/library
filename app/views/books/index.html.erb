@@ -1,0 +1,20 @@
+<h1>Library</h1>
+<%= link_to "Add Book", new_book_path %>
+<table>
+  <tr>
+    <th> Title </th>
+    <th> Author </th>
+    <th> Genre </th>
+    <th> Rating </th>
+  </tr>
+
+<% @books.each do |book| %>
+<tr>
+  <td><%= book.name %></td>
+  <td><%= book.author %></td>
+  <td><%= book.genre %></td>
+  <td><%= book.rating %></td>
+  <%= link_to 
+</tr>
+<% end %>
+</table>
