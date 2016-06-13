@@ -15,6 +15,8 @@
   <td><%= book.genre %></td>
   <td><%= book.rating %></td>
   <td><%= link_to "similar books", similar_book_path(book) %></td>
+  <td> <%= link_to "Edit", edit_book_path(book) %></td>
+  <td> <%= link_to "Destroy!", book_path(book), method: :delete, data: {confirm: "are you sure?"} %> </td>
 </tr>
 <% end %>
 </table>
