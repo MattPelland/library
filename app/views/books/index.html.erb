@@ -2,10 +2,10 @@
 <%= link_to "Add Book", new_book_path %>
 <table>
   <tr>
-    <th> Title </th>
-    <th> Author </th>
-    <th> Genre </th>
-    <th> Rating </th>
+    <th> <%=link_to "Name", :sort => 'name'%> </th>
+    <th> <%= link_to "Author", :sort => 'author' %> </th>
+    <th> <%= link_to "Genre", :sort => 'genre' %></th>
+    <th> <%= link_to "Rating", :sort => 'rating' %></th>
   </tr>
 
 <% @books.each do |book| %>
